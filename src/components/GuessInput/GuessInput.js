@@ -1,7 +1,8 @@
-import React, {useState, useId} from "react";
+import React, {useState, useId, useRef} from "react";
 
 function GuessInput({gameStatus,handleSubmitGuess}){
     const id = useId();
+    const guessRef = useRef()
     const guessId = `${id}-guess`
     const [guess, setGuess] = useState('');
     function handleSubmit(event){
@@ -14,7 +15,8 @@ function GuessInput({gameStatus,handleSubmitGuess}){
         setGuess('')
     } 
     return(
-    <form 
+    <form
+        ref={guessRef}
         onSubmit={handleSubmit}
         className="guess-input-wrapper">
         <label htmlFor={guessId}>Enter guess:</label>
