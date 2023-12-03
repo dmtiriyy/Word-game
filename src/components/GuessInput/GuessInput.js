@@ -19,7 +19,10 @@ function GuessInput({gameStatus,handleSubmitGuess}){
         ref={guessRef}
         onSubmit={handleSubmit}
         className="guess-input-wrapper">
-        <label htmlFor={guessId}>Enter guess:</label>
+        <label htmlFor={guessId}
+        onChange={(event) => {
+            guessRef= event.target.value
+        }}>Enter guess:</label>
         <input 
         required
         disabled={gameStatus !== 'running'}
