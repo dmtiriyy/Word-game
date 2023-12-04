@@ -1,4 +1,4 @@
-import React, {useState, useId, useRef} from "react";
+import React, {useState, useId, useRef, useEffect} from "react";
 
 function GuessInput({gameStatus,handleSubmitGuess}){
     const id = useId();
@@ -14,6 +14,9 @@ function GuessInput({gameStatus,handleSubmitGuess}){
         handleSubmitGuess(guess)
         setGuess('')
     } 
+    useEffect(() => {
+        console.log(`${guess} value`)
+    })
     return(
     <form
         ref={guessRef}
