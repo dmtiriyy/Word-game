@@ -15,6 +15,7 @@ function GuessInput({gameStatus,handleSubmitGuess}){
         setGuess('')
     } 
     useEffect(() => {
+        document.title = `${guess} Value`
         console.log(`${guess} value`)
     })
     return(
