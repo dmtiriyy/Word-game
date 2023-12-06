@@ -17,7 +17,7 @@ function GuessInput({gameStatus,handleSubmitGuess}){
     useEffect(() => {
         document.title = `${guess} Value`
         console.log(`${guess} value`)
-    })
+    }, [])
     return(
     <form
         ref={guessRef}
@@ -25,7 +25,7 @@ function GuessInput({gameStatus,handleSubmitGuess}){
         className="guess-input-wrapper">
         <label htmlFor={guessId}
         onChange={(event) => {
-            guessRef= event.target.value
+           setGuess(event.target.value)
         }}>Enter guess:</label>
         <input 
         required
