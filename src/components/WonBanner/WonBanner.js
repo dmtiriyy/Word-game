@@ -7,6 +7,9 @@ function WonBanner({numOfGuesses}){
     if(happyImg){
         setHappyImg(true)
     }
+    React.useEffect(() => {
+        console.log(happyImg);
+    })
     return <Banner status="happy">
  <p>
             <strong>Congratulations!</strong> Got in in {' '}
