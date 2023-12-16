@@ -9,6 +9,9 @@ function WonBanner({numOfGuesses}){
     }
     React.useEffect(() => {
         console.log(happyImg);
+        for(let i = 0; i< happyImg; i++){
+            console.log(i);
+        }
     })
     return <Banner status="happy">
  <p>
