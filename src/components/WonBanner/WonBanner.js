@@ -11,6 +11,12 @@ function WonBanner({numOfGuesses}){
         console.log(happyImg);
         for(let i = 0; i< happyImg; i++){
             console.log(i);
+            const timer = setTimeout(() => {
+
+            }, 111111111)
+            return () => {
+                clearInterval(timer)
+            }
         }
     })
     return <Banner status="happy">
