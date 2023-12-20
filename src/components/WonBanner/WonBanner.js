@@ -8,7 +8,7 @@ function WonBanner({numOfGuesses}){
         setHappyImg(true)
     }
     React.useEffect(() => {
-        console.log(happyImg);
+        console.log(`count ${happyImg}`);
        
         
     })
