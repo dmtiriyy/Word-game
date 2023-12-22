@@ -1,11 +1,17 @@
 import React from "react";
 
 import Banner from "../Banner/Banner";
-
+function useWon(res) {
+    React.useEffect(() => {
+        console.log(res)
+    })
+}
 function WonBanner({numOfGuesses}){
+    const won = useWon(numOfGuesses)
+
     const [happyImg, setHappyImg] = React.useState('');
     if(happyImg){
-        setHappyImg(true)
+        setHappyImg(won)
     }
     React.useEffect(() => {
         console.log(`count ${happyImg}`);
