@@ -5,19 +5,14 @@ function GuessInput({gameStatus,handleSubmitGuess}){
     const guessRef = useRef()
     const guessId = `${id}-guess`
     const [guess, setGuess] = useState('');
-    function handleSubmit(event){
-        event.preventDefault();
-        if(guess.length !==5){
-            window.alert('Please enter 5 characters')
-            return
+   
+    const allGuesses = React.useMemo(() => {
+        const result = [];
+        for(let i = 1; i<= guess; i++){
+            result.push(i)
         }
-        handleSubmitGuess(guess)
-        setGuess('')
-    } 
-    useEffect(() => {
-        document.title = `${guess} Value`
-        console.log(`${guess} value`)
-    }, [])
+        return result
+    }, [guess])
     return(
     <form
         ref={guessRef}
