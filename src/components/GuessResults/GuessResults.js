@@ -10,6 +10,9 @@ function GuessResults({guesses, answer}){
             setNumsOfQuestions(0);
         })
     })
+    const answers = React.useCallback(() => {
+    setNumsOfQuestions(numsofQuestions + 1)
+    })
     return(
         <div className="guess-results">
     {range(NUM_OF_GUESSES_ALLOWED).map((num) => (

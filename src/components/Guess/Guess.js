@@ -16,6 +16,7 @@ function Cell({letter, status}) {
 
 function Guess({value, answer}){
   const result = checkGuess(value, answer)
+ 
   React.useEffect(() => {
     window.addEventListener('print', value)
   })
