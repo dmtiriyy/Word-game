@@ -16,7 +16,7 @@ function GuessInput({gameStatus,handleSubmitGuess}){
     return(
     <form
         ref={guessRef}
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmitGuess}
         className="guess-input-wrapper">
         <label htmlFor={guessId}
         onChange={(event) => {
