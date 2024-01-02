@@ -6,12 +6,12 @@ function GuessInput({gameStatus,handleSubmitGuess}){
     const guessId = `${id}-guess`
     const [guess, setGuess] = useState('');
    
-    const allGuesses = React.useMemo(() => {
+    const allGuesses = React.useCallback(() => {
         const result = [];
-        for(let i = 1; i<= guess; i++){
-            result.push(i)
+        if(result){
+            return result
         }
-        return result
+        
     }, [guess])
     return(
     <form
