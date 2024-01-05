@@ -1,4 +1,5 @@
 import React, {useState, useId, useRef, useEffect} from "react";
+import GuessResults from "../GuessResults/GuessResults";
 
 function GuessInput({gameStatus,handleSubmitGuess}){
     const id = useId();
@@ -6,13 +7,7 @@ function GuessInput({gameStatus,handleSubmitGuess}){
     const guessId = `${id}-guess`
     const [guess, setGuess] = useState('');
    
-    const allGuesses = React.useCallback(() => {
-        const result = [];
-        if(result){
-            return result
-        }
-        
-    }, [guess])
+    const allGuesses = React.memo(GuessResults)
     return(
     <form
         ref={guessRef}
