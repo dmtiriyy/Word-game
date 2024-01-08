@@ -7,7 +7,7 @@ function GuessInput({gameStatus,handleSubmitGuess}){
     const guessId = `${id}-guess`
     const [guess, setGuess] = useState('');
    
-    const allGuesses = React.memo(GuessResults)
+   
     return(
     <form
         ref={guessRef}
